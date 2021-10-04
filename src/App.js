@@ -8,7 +8,9 @@ import ProtecedRouting from './ProtectedRouting';
 import useAuth from './useAuth';
 import Profile from './Pages/Profile';
 
+
 function App() {
+
   const [auth, login, logout] = useAuth(false)
   return (
     <Router>
@@ -18,7 +20,8 @@ function App() {
             (<button className="btn btn-sm btn-primary" onClick={logout}>Logout</button>)
             : (<button className="btn btn-sm btn-warning" onClick={login}>Login</button>)
           }
-          personalPage={auth ? <Link className="nav-link" to="/profile">Profile</Link> : null}
+          personalPage={auth ? <Link className="nav-link" to="/profile">Profile</Link>: null}
+          otherPage={auth ? null : <Link className="nav-link" to="/about">About-Us</Link>}
         />
         {/* {auth ?
           (<>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 
-function Nav({ loginCondition, personalPage }) {
+function Nav({ loginCondition, personalPage, otherPage }) {
     return (
         <>
             <div style={{ background: '#343a40' }}>
@@ -10,7 +10,7 @@ function Nav({ loginCondition, personalPage }) {
                     <Link className="navbar-brand" to="/">React</Link>
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about">About</Link>
+                            {otherPage}
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/login">Accounts</Link>
