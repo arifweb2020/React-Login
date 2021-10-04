@@ -29,7 +29,6 @@ function App() {
           <Route path="/about" component={About} />
           <ProtecedRouting path="/login" component={Login} isAuth={auth} />
           <ProtecedRouting path="/profile" component={Profile} isAuth={auth} />
-
         </Switch>
       </div>
     </Router>
