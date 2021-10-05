@@ -1,4 +1,5 @@
 import React, { useState , useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,8 +22,6 @@ function Signin(props) {
         }
     },[])
 
-    
-
 
     const myInput = (e) => {
         setUsers({ ...users, [e.target.name]: e.target.value })
@@ -40,6 +39,7 @@ function Signin(props) {
             setUsers({ loggedIn: true })
             setTimeout(() => {
                 props.history.push("/admin")
+                //return <Redirect to='/admin' />
             }, 2000);
             toast.success("login successfully", {
                 position: "bottom-right",

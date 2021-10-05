@@ -9,7 +9,7 @@ function Admin(props) {
     }
 
     return (
-        <div>
+        <div className="container mt-4">
             <h1>Admin Page</h1>
             <button className="btn btn-md btn-warning" onClick={logout}>Logout</button>
         </div>
