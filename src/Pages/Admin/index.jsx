@@ -1,23 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom'
+import React from 'react';
+
 
 function Admin(props) {
-    const [loggedIn, setLoggedIn] = useState(true)
-    const token = localStorage.getItem("user-token")
-    if (token === null) {
-        setLoggedIn(false)
-    }
 
-
-    if (loggedIn === false) {
-        props.history.push("/")
-    }
-
-
-
-    // if (loggedIn === false){
-    //     return <Redirect to="/" />
-    // }
     const logout = () => {
         window.localStorage.removeItem("user-token")
         window.location.href = '/';
