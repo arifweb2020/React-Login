@@ -1,40 +1,23 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 function Nav() {
-    const location = useLocation();
     return (
         <>
             <div style={{ background: '#343a40' }}>
                 <nav className="navbar navbar-expand-sm bg-dark navbar-dark container">
-                    <Link className="navbar-brand" to="/">React</Link>
+                    <Link className="navbar-brand" to="/">React-Main</Link>
                     <ul className="navbar-nav">
-                        {location.pathname === "/admin" || location.pathname === "/profile" ?
-                            (<>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/admin">Admin</Link>
+                                    <Link className="nav-link" to="/about">about</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/profile">Profile</Link>
-                                </li></>) : (<Link className="navbar-brand" to="/policy">Privacy-Ploicy</Link>)
-                        }
+                                    <Link className="nav-link" to="/service">services</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/invest">Investment</Link>
+                                </li>
                     </ul>
-
-                    {/* 
-                    {localStorage.getItem("user-token") === null ? null :
-                        (<ul className="navbar-nav">
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/admin">Admin</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/profile">Profile</Link>
-                            </li>
-
-                        </ul>)
-                    } */}
-
-
                 </nav>
             </div>
         </>
