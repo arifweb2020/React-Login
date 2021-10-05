@@ -25,6 +25,12 @@ function Profile() {
         }
     }, []);
 
+    const clearItem = () =>{
+        window.localStorage.removeItem('user-list')
+        setTimeout(() => {
+            window.location.href = '/profile';
+        }, 9000);
+    }
     return (
         <>
             <div className="jumbotron">
@@ -41,6 +47,7 @@ function Profile() {
                         }
                     </div>
                     <div className="col-lg-6">
+                        <button className="btn btn-sm btn-warning" onClick={clearItem}>Clear</button>
                     {
                             localdata.map((item, index) => {
                                 return <h1 key={index}>{item.username}</h1>
