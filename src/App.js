@@ -8,6 +8,7 @@ import Redeem from './Pages/Redeem';
 import Home from './Pages/Home';
 import Invest from './Pages/Invest';
 import Service from './Pages/Service';
+import Login from './Pages/Login';
 
 function App() {
   return (
@@ -19,13 +20,14 @@ function App() {
           component={(props) => <MainContainer {...props}><About {...props} /></MainContainer>} />
           <Route exact path="/service" 
           component={(props) => <MainContainer {...props}><Service {...props} /></MainContainer>} />
+          <Route exact path="/login" 
+          component={(props) => <MainContainer {...props}><Login {...props} /></MainContainer>} />
           <Route exact path="/invest" 
           component={(props) => <InvestContainer {...props}><Invest {...props} /></InvestContainer>} />
           <Route exact path="/amount" 
           component={(props) => <InvestContainer {...props}><Amount {...props} /></InvestContainer>} />
           <Route exact path="/redeem" 
-          component={(props) => <InvestContainer {...props}><Redeem {...props} /></InvestContainer>} />
-          
+          component={(props) => <InvestContainer {...props}><Redeem {...props} /></InvestContainer>} /> 
         </Switch>
     </Router>
   );
